@@ -6,6 +6,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 
+# CUSTOMERS
 @api_view(["GET", "POST"])
 def customers(request):
     if request.method == "GET":
@@ -19,11 +20,12 @@ def customers(request):
         if serializer.is_valid():
             serializer.save()
             return Response(
-                {"customers": serializer.data}, status=status.HTTP_201_CREATED
+                {"customer": serializer.data}, status=status.HTTP_201_CREATED
             )
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+# CUSTOMER
 @api_view(["GET", "POST", "DELETE"])
 def customer(request, id):
     try:
