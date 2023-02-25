@@ -45,3 +45,4 @@ def customer(request, id):
             serializer.save()
             return Response({"customer": serializer.data})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+# blablabla
