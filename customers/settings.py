@@ -49,9 +49,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 
-GRAPHENE ={
-    'SCHEMA': 'customers.schema.schema'
-}
+GRAPHENE = {"SCHEMA": "customers.schema.schema"}
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
@@ -70,7 +68,7 @@ APPEND_SLASH = True
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework_simplejwt.authentication.JWTAuthentication",
-    )
+    ),
 }
 
 CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]

@@ -10,7 +10,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 
 # CUSTOMERS
 @api_view(["GET", "POST"])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def customers(request):
     if request.method == "GET":
         # invoke serializer and return to client
@@ -30,7 +30,7 @@ def customers(request):
 
 # CUSTOMER
 @api_view(["GET", "POST", "DELETE"])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def customer(request, id):
     try:
         data = Customer.objects.get(pk=id)
