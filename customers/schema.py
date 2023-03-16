@@ -2,6 +2,7 @@ import graphene
 from graphene_django import DjangoObjectType
 
 from customers.models import Customer
+import time
 
 
 class CustomerType(DjangoObjectType):
